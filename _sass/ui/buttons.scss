@@ -1,0 +1,51 @@
+/*------------------------------------*\
+    $BUTTONS
+\*------------------------------------*/
+.btn {
+    display:block;
+
+    @include font-size(20px);
+    text-align:center;
+
+    color:#999;
+    text-shadow:0 1px 0 rgba(255,255,255,0.8),0 1px 0 rgba(255,255,255,0.1);
+    border-radius:$brand-round;
+    border:1px solid #ccc;
+    background-color:#f0f0f0;
+    //background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#f8f8f8)); /* Chrome,Safari4+ */
+    box-shadow:0 3px 0 #aaa;
+
+    &:hover, &:active, &:focus, &:visited {
+        text-decoration:none;
+    }
+    &:active {
+        box-shadow:none;
+        position:relative;
+        top:3px;
+    }
+}
+.btn--disabled {
+    cursor:default;
+
+    &:active {
+        top:0!important;
+    }
+}
+.btn--cta {
+    color:#fff;
+    text-shadow:0 -1px 0 rgba(0,0,0,0.5),0 1px 0 rgba(0,0,0,0.1);
+
+    border-color:$brand-color;
+}
+.btn--pressed, .btn--pressed:active {
+    box-shadow:0 -2px 0 0 #999;
+}
+.btn--submit {
+
+}
+.btn--coupon {
+    display:block;
+    width:280px;
+    margin:0 auto;
+    margin-bottom:1.5em;
+}

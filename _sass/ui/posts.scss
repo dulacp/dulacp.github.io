@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    $POSTS
+\*------------------------------------*/
+.site-short-bio {
+    @include media-query(desk){
+        //text-align:right;
+    }
+}
+
+.post-list{
+    @extend .block-list;
+}
+
+.post__time {
+    color:#999;
+}
+.post__tags {
+    display:block;
+    color:#999;
+    @include font-size(14px);
+    font-family:Arial, sans-serif;
+
+    .icon {
+        color:#ccc;
+    }
+}
+.post__title {
+    margin-bottom:0;
+
+    > a {
+        font-weight:300;
+
+        &:hover, &:active, &:focus {
+            //@extend .hilite;
+        }
+    }
+}

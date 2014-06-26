@@ -1,0 +1,40 @@
+/*------------------------------------*\
+    $IMAGES
+\*------------------------------------*/
+.logo-wrapper {
+	position:relative;
+	margin:0 auto;
+	width:58px;
+    height:76px;
+}
+.logo{
+	background:url(../img/logo.png) no-repeat center center;
+	text-indent:-2000em;
+
+    width:58px;
+    height:100%;    
+
+    position:absolute;
+    top: -2px; // pixel perfect
+
+    &,
+    & > img{
+        display:block;
+    }
+}
+
+@if $responsive == true{
+
+@include media-query(palm){
+	.logo-wrapper {
+		display:none;
+	}
+}
+
+@include media-query(lap){
+	.logo-wrapper {
+		display:none;
+	}
+}
+
+}

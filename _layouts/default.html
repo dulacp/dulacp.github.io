@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en" class="page  <%= current_page.data.page_class %>">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+  <!-- Prefetch DNS for external assets (Twitter widgets etc). -->
+  <!-- <link rel="dns-prefetch" href="//fonts.googleapis.com"> -->
+  <link rel="dns-prefetch" href="//platform.twitter.com">
+  <link rel="dns-prefetch" href="//p.twitter.com">
+  <link rel="dns-prefetch" href="//cdn.api.twitter.com">
+  <link rel="dns-prefetch" href="//www.google-analytics.com">
+
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  
+  <link rel="stylesheet" href="{{ "/css/style.css" | prepend: site.baseurl }}"/>
+  <link href="{{ "/feed.xml" | prepend: site.baseurl }}" rel='alternate' title='Atom' type='application/atom+xml' />
+
+  <link rel="shortcut icon" href="{{ "/icon.png" | prepend: site.baseurl }}">
+  <link rel="apple-touch-icon-precomposed" href="{{ "/icon.png" | prepend: site.baseurl }}">
+  <meta name="apple-mobile-web-app-title" content="{{ site.username }}">
+  <meta name="description" content="Articles on iOS, Django, Python, and back-end achitectures.">
+
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body lang="en">
+
+  <div class="wrapper">
+    {% include header.html %}
+
+    <div class="gw">
+      <div class="g  one-whole  desk-six-tenths">
+        <h1 class="accessibility">@dulaccc – iOS, Objective-C, Python, Django, back-end architecture and a couple more&hellip;</h1>
+        
+        {{ content }}
+
+      </div>
+      <div class="g  one-whole  desk-three-tenths  push--desk-one-tenth">
+        <hr class="hide--desk rule rule--dashed">
+        <div class="site-short-bio">
+          <p>Hi everyone, I'm a <b>developer</b> on the <b>iOS</b> plateform and a curious back-end developer on <b>Django</b>. I love photography and has a Nuclear Civil Engineering degree in my pocket.</p>
+          <p><a href="https://twitter.com/dulaccc" class="twitter-follow-button" data-show-count="true" data-lang="en">Follow @twitterapi</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include footer.html %}
+
+  <!-- Javascript Scripts -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script src="{{ "/scripts/vendor/jquery.lettering-0.6.1.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/scripts/core.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/scripts/respond.min.js" | prepend: site.baseurl }}"></script>
+
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-5468549-19']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+</body>
+</html>

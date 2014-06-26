@@ -1,0 +1,22 @@
+/*------------------------------------*\
+    $MISC
+\*------------------------------------*/
+
+/**
+ * Make up my own responsive push class for the sidebar.
+ */
+@include media-query(desk){
+    .push--desk-one-tenth{
+        position:relative;
+        left:10%;
+    }
+}
+
+
+.hilite{
+    background-color:$brand-color;
+    color:#fff;
+}
+
+::selection         { @extend .hilite; }
+::-moz-selection    { @extend .hilite; }

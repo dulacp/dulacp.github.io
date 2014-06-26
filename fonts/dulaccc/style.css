@@ -1,0 +1,53 @@
+@font-face {
+	font-family: 'dulaccc';
+	src:url('dulaccc.eot');
+	src:url('dulaccc.eot?#iefix') format('embedded-opentype'),
+		url('dulaccc.svg#dulaccc') format('svg'),
+		url('dulaccc.woff') format('woff'),
+		url('dulaccc.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+	font-family: 'dulaccc';
+	content: attr(data-icon);
+	speak: none;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"]:before {
+*/
+.icon-twitter:before, .icon-github:before, .icon-feed:before, .icon-tags:before, .icon-quill:before, .icon-code:before {
+	font-family: 'dulaccc';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+.icon-twitter:before {
+	content: "\e000";
+}
+.icon-github:before {
+	content: "\e001";
+}
+.icon-feed:before {
+	content: "\e002";
+}
+.icon-tags:before {
+	content: "\e003";
+}
+.icon-quill:before {
+	content: "\e004";
+}
+.icon-code:before {
+	content: "\e005";
+}

@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    $TABLES
+\*------------------------------------*/
+
+table {
+}
+thead {
+	background:lighten(adjust-hue($body-color, -10), 3%);;
+	color:lighten(adjust-hue($body-color, -10), 30%);
+	@include font-size(14px);
+}
+
+.table--bordered{
+	th {
+		border-color:darken(adjust-hue($body-color, -10), 10%);
+	}
+}
+.table--striped tbody tr:nth-of-type(odd) {
+	background-color: #f0f0f0;
+}
