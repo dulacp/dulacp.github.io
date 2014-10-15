@@ -33,10 +33,10 @@ And you guess that the `yaw` value is the rotation against the red axis. It seem
 
     self.motionManager = [[CMMotionManager alloc] init];
     self.motionManager.deviceMotionUpdateInterval = 0.02;  // 50 Hz
-        
+
     self.motionDisplayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(motionRefresh:)];
     [self.motionDisplayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
-    
+
     if ([self.motionManager isDeviceMotionAvailable]) {
         // to avoid using more CPU than necessary we use `CMAttitudeReferenceFrameXArbitraryZVertical`
         [self.motionManager startDeviceMotionUpdatesUsingReferenceFrame:CMAttitudeReferenceFrameXArbitraryZVertical];
@@ -45,13 +45,13 @@ And you guess that the `yaw` value is the rotation against the red axis. It seem
 
 - (void)motionRefresh:(id)sender {
     double yaw = self.motionManager.deviceMotion.attitude.yaw;
-    
+
     // use the yaw value
     // ...
 }
 {% endhighlight %}
 
-And I thought *"easy, problem solved"*. In fact, it was terrible and unusable because the `yaw` value was impacted by the iPhone `roll` and `pitch`. I mean that if keep the iPhone vertical and twist it against the *blue axis* it will modify the `yaw`&hellip; **Bad!** 
+And I thought *"easy, problem solved"*. In fact, it was terrible and unusable because the `yaw` value was impacted by the iPhone `roll` and `pitch`. I mean that if keep the iPhone vertical and twist it against the *blue axis* it will modify the `yaw`&hellip; **Bad!**
 
 <small>Check out the [gimbal lock][gimbal-lock--wiki] problem if you want to understand more about it.</small>
 
@@ -65,7 +65,7 @@ So back to square one, I had to find a way to compute the `yaw` by myself and I 
 >
 > <cite>[Wikipedia][quaternion--wiki]</cite>
 
-It eases the way we deal with the orientation of a *body* in a 3D space, and is better suited than the [Euler angles][euler-angles--wiki] that Apple is computing for us because of three reasons : 
+It eases the way we deal with the orientation of a *body* in a 3D space, and is better suited than the [Euler angles][euler-angles--wiki] that Apple is computing for us because of three reasons :
 
 * it's easier to compose rotations or to extract values from it.
 * it avoids the [gimbal lock][gimbal-lock--wiki] problem.
@@ -87,7 +87,7 @@ $$
 \end{equation}
 $$
 
-So, the `motionRefresh:` method described above become : 
+So, the `motionRefresh:` method described above become :
 
 {% highlight objective-c %}
 - (void)motionRefresh:(id)sender {
@@ -103,7 +103,7 @@ So, the `motionRefresh:` method described above become :
 
 We can improve the code a bit to have a perfectly smooth `yaw` signal, or to have some kind of internia in the tilt movement (just like I needed in my [DPMeterView][dp-meter-view--github] project).
 
-In order to do that, we need a very simple one dimensionnal [Kalman-filter][kalman-filter--wiki]. I'm not discussing the details of how it works because it's not the purpose of the article. However, you can expirement by yourself the impact of changing some of those values. 
+In order to do that, we need a very simple one dimensionnal [Kalman-filter][kalman-filter--wiki]. I'm not discussing the details of how it works because it's not the purpose of the article. However, you can expirement by yourself the impact of changing some of those values.
 
 {% highlight objective-c %}
 - (void)motionRefresh:(id)sender {
@@ -113,13 +113,13 @@ In order to do that, we need a very simple one dimensionnal [Kalman-filter][kalm
     if (self.motionLastYaw == 0) {
         self.motionLastYaw = yaw;
     }
-    
+
     // kalman filtering
     static float q = 0.1;   // process noise
     static float r = 0.1;   // sensor noise
     static float p = 0.1;   // estimated error
     static float k = 0.5;   // kalman filter gain
-    
+
     float x = self.motionLastYaw;
     p = p + q;
     k = p / (p + r);
