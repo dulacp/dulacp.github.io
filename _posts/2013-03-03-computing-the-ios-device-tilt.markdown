@@ -77,13 +77,13 @@ There is a very simple formula to [compute `yaw` from a quaternion][quaternion-t
 
 $$
 \begin{equation}
-q = \begin{bmatrix}q\_{0} & q\_1 & q\_2 & q\_3\end{bmatrix}
+q = \begin{bmatrix}q_{0} & q_1 & q_2 & q_3\end{bmatrix}
 \end{equation}
 $$
 
 $$
 \begin{equation}
-\phi = \arcsin( 2 (q\_0 q\_2 - q\_1 q\_3 ))
+\phi = \arcsin( 2 (q_0 q_2 - q_1 q_3 ))
 \end{equation}
 $$
 
