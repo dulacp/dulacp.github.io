@@ -77,7 +77,7 @@ There is a very simple formula to [compute `yaw` from a quaternion][quaternion-t
 
 $$
 \begin{equation}
-q = \begin{bmatrix}q\_{0} & q\_1 & q\_2 & q\_4\end{bmatrix} 
+q = \begin{bmatrix}q\_{0} & q\_1 & q\_2 & q\_3\end{bmatrix}
 \end{equation}
 $$
 
