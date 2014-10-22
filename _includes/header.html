@@ -1,22 +1,24 @@
-<header class="page-head">
-  <div class="gw">
-    <div class="g  one-whole  desk-six-tenths">
-      <a href="{{ site.baseurl }}/" class="site-logo">
-        <span class="fancy-title">{{ site.title }}</span>
-      </a>
-    </div>
-    <div class="g  one-whole  desk-three-tenths  push--desk-one-tenth">
-      <ul class="nav site-nav">
-        <li class="site-nav__home">
-          <a href="{{ '/' | prepend: site.baseurl }}">Home</a>
-        </li>
-        <li class="site-nav__home">
-          <a href="{{ '/work/' | prepend: site.baseurl }}">Work</a>
-        </li>
-        <li class="site-nav__home">
-          <a href="{{ '/about/' | prepend: site.baseurl }}">About</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</header>
+<!-- Header -->
+<section id="header" class="skel-layers-fixed">
+  <header>
+    <span class="image avatar"><img src="{{ "/images/avatar.jpg" | prepend: site.baseurl }}" data-at2x="{{ "/images/avatar@2x.jpg" | prepend: site.baseurl }}" alt="" /></span>
+    <div id="logo"><a href="{{ site.baseurl }}/">{{ site.title }}</a></div>
+    <p>iOS lover<br />
+      Swift addict</p>
+  </header>
+  <nav id="nav">
+    <ul>
+      <li><a href="{{ '/' | prepend: site.baseurl }}">Home</a></li>
+      <li><a href="{{ '/work/' | prepend: site.baseurl }}">Work</a></li>
+      <li><a href="{{ '/about/' | prepend: site.baseurl }}">About</a></li>
+    </ul>
+  </nav>
+  <footer>
+    <ul class="icons">
+      <li><a href="https://twitter.com/dulaccc" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="https://github.com/dulaccc" class="icon fa-github"><span class="label">Github</span></a></li>
+      <li><a href="mailto:pierre@dulaccc.me" class="icon fa-envelope"><span class="label">Email</span></a></li>
+      <li><a href="{{ "/feed.xml" | prepend: site.baseurl }}" class="icon fa-rss"><span class="label">Email</span></a></li>
+    </ul>
+  </footer>
+</section>
