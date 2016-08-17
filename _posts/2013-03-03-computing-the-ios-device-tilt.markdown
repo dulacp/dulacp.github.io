@@ -13,9 +13,9 @@ published: true
 
 The tilt of a device is probably the most useful information you can get from the acceleration data of your iPhone, iPad or iPod touch. Besides, a lot of games are using it. The question is, **how to get this tilt value ?**
 
-## First idea
+## First thought
 
-I've looked into the [Core Motion documention][core-motion--doc] and find out that Apple is computing some values for us available within a `CMAttitude` class instance.
+I've looked into the [Core Motion documention][core-motion--doc] and found out that Apple is computing some values for us, which is available within a `CMAttitude` class instance.
 
 > An instance of the CMAttitude class represents a measurement of the device’s attitude at a point in time.
 >
@@ -25,7 +25,7 @@ Well, Apple isn't talking about a [ballerina attitude][ballerina--img] but more 
 
 <img src="{{ '/images/iphone-attitude.png' | prepend:site.baseurl }}">
 
-And you guess that the `yaw` value is the rotation against the red axis. It seems pretty straight foward so let's implement it.
+And you have guessed, the `yaw` value is the rotation against the red axis. It seems pretty straight forward so let's implement that.
 
 {% highlight objective-c %}
 - (void)viewDidLoad {
@@ -51,17 +51,17 @@ And you guess that the `yaw` value is the rotation against the red axis. It seem
 }
 {% endhighlight %}
 
-And I thought *"easy, problem solved"*. In fact, it was terrible and unusable because the `yaw` value was impacted by the iPhone `roll` and `pitch`. I mean that if keep the iPhone vertical and twist it against the *blue axis* it will modify the `yaw`&hellip; **Bad!**
+And I thought *"easy, problem solved"*. In fact, it was terrible and unusable because the `yaw` value was impacted by the iPhone `roll` and `pitch`. I mean, if we keep the iPhone vertical and twist it against the *blue axis*, it will modify the `yaw`&hellip; **Bad!**
 
 <small>Check out the [gimbal lock][gimbal-lock--wiki] problem if you want to understand more about it.</small>
 
-So back to square one, I had to find a way to compute the `yaw` by myself and I felt that maths will rescue me !
+So back to square one, I had to find a way to compute the `yaw` by myself and I felt that math may rescue me!
 
 ## The beauty of Quaternions
 
-**If you don't know what a quaternion is yet, please don't be afraid by this strange word that seems right out of Star Trek.**
+**If you don't know what a quaternion is yet, please don't freak out by this strange word that seems coming right out of Star Trek.**
 
-> Quaternions were first discribed by Hamilton in 1843 and applied to mechanics in three-dimensional space.
+> Quaternions were first described by Hamilton in 1843 and applied to mechanics in three-dimensional space.
 >
 > <cite>[Wikipedia][quaternion--wiki]</cite>
 
@@ -71,7 +71,7 @@ It eases the way we deal with the orientation of a *body* in a 3D space, and is 
 * it avoids the [gimbal lock][gimbal-lock--wiki] problem.
 * and Apple provides a quaternion in the `CMAttitude` class instance.
 
-And because we only want to compute the `yaw` we do not have to worry about the [gimbal lock][gimbal-lock--wiki] problem, since our goal is not to described the complete iPhone orientation in the 3D space but only the tilt.
+And because we only want to compute the `yaw` we do not have to worry about the [gimbal lock][gimbal-lock--wiki] problem, since our goal is not to describe the complete iPhone orientation in the 3D space but only the tilt of it.
 
 There is a very simple formula to [compute `yaw` from a quaternion][quaternion-to-yaw--wiki] :
 
@@ -103,7 +103,7 @@ So, the `motionRefresh:` method described above become :
 
 We can improve the code a bit to have a perfectly smooth `yaw` signal, or to have some kind of internia in the tilt movement (just like I needed in my [DPMeterView][dp-meter-view--github] project).
 
-In order to do that, we need a very simple one dimensionnal [Kalman-filter][kalman-filter--wiki]. I'm not discussing the details of how it works because it's not the purpose of the article. However, you can expirement by yourself the impact of changing some of those values.
+In order to do that, we need a very simple one dimensional [Kalman-filter][kalman-filter--wiki]. I'm not discussing the details of how it works because it's not the purpose of the article. However, you can experiment by yourself the impact of changing some of those values.
 
 {% highlight objective-c %}
 - (void)motionRefresh:(id)sender {
