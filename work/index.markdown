@@ -10,12 +10,12 @@ weight: 5
 
 ---
 
-#### [Ledej](http://ledej.fr)
-is a web app to pre-order your food at noon.
+#### [Photonomie](https://photonomie.com)
+An app optimized to take 360 photos and share them with the world.
 
 ---
 
-#### [Carousel](http://getcarousel.com)
+#### **Carousel** (not hosted anymore)
 is the future of bookmarking. Create lists of everything you like.
 
 ---
@@ -30,6 +30,21 @@ helps you to manage group expenses on the Cloud, to keep your friends and keep y
 
 
 ## Open Source
+
+---
+
+#### [igenstrings](https://github.com/dulaccc/igenstrings)
+Apple genstrings command on steroids by adding merging superpowers.
+
+---
+
+#### [Accountant](https://github.com/dulaccc/Accountant)
+Accounting made accessible for small businesses and sole proprietorships through a simple Django project.
+
+---
+
+#### [django-accounting](https://github.com/dulaccc/django-accounting)
+Accounting pluggable app for Django 1.7+ projects.
 
 ---
 
@@ -55,11 +70,6 @@ is a gravity-aware gauge-style meter view with delightful animations.
 
 #### [Currency.js](https://github.com/dulaccc/currency.js)
 is a tiny tiny javascript library to convert a currency ISO Code (like USD) into its symbol ($).
-
----
-
-#### [PyGenStrings](https://github.com/dulaccc/pygenstrings)
-is a little utility project to help you with incremental localisation during iOS development.
 
 ---
 
