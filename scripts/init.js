@@ -8,7 +8,7 @@
 	skel.init({
 		reset: 'full',
 		breakpoints: {
-			global: { href: '/css/style.css', containers: '45em', grid: { gutters: { vertical: '2em', horizontal: 0 } } },
+			global: { containers: '45em', grid: { gutters: { vertical: '2em', horizontal: 0 } } },
 			xlarge: { media: '(max-width: 1680px)', href: '/css/style-xlarge.css' },
 			large: { media: '(max-width: 1280px)', href: '/css/style-large.css', containers: '42em', grid: { gutters: { vertical: '1.5em' } }, viewport: { scalable: false } },
 			medium: { media: '(max-width: 1024px)', href: '/css/style-medium.css', containers: '85%', grid: { collapse: 1 } },

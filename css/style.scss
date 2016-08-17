@@ -18,6 +18,8 @@ $size-header: 23em;
 
 	body {
 		background: $color-bg;
+		margin: 0;
+		padding: 0;
 	}
 
 	body, input, select, textarea {
@@ -986,6 +988,8 @@ $size-header: 23em;
 			border-top: solid ($size-border-width * 3) $color-border;
 
 			> .container {
+				width: 42em;
+				margin: 0 auto;
 				padding: 6em 0 4em 0;
 			}
 
