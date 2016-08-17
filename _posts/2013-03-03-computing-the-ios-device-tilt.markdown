@@ -27,7 +27,7 @@ Well, Apple isn't talking about a [ballerina attitude][ballerina--img] but more 
 
 And you have guessed, the `yaw` value is the rotation against the red axis. It seems pretty straight forward so let's implement that.
 
-{% highlight objective-c %}
+{% highlight objc %}
 - (void)viewDidLoad {
     [super viewDidLoad];
 
@@ -89,7 +89,7 @@ $$
 
 So, the `motionRefresh:` method described above become :
 
-{% highlight objective-c %}
+{% highlight objc %}
 - (void)motionRefresh:(id)sender {
     CMQuaternion quat = self.motionManager.deviceMotion.attitude.quaternion;
     double yaw = asin(2*(quat.x*quat.z - quat.w*quat.y));
@@ -105,7 +105,7 @@ We can improve the code a bit to have a perfectly smooth `yaw` signal, or to hav
 
 In order to do that, we need a very simple one dimensional [Kalman-filter][kalman-filter--wiki]. I'm not discussing the details of how it works because it's not the purpose of the article. However, you can experiment by yourself the impact of changing some of those values.
 
-{% highlight objective-c %}
+{% highlight objc %}
 - (void)motionRefresh:(id)sender {
     CMQuaternion quat = self.motionManager.deviceMotion.attitude.quaternion;
     double yaw = asin(2*(quat.x*quat.z - quat.w*quat.y));

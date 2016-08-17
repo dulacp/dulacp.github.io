@@ -12,4 +12,7 @@ username: dulaccc
 # Build settings
 markdown: kramdown
 permalink: /:year/:month/:title.html
+
 highlighter: rouge
+kramdown:
+  syntax_highlighter: rouge

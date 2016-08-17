@@ -52,7 +52,7 @@ As the type name implies, this context would be associated to the main dispatch 
 
 Now we know how to intialize our child managed object context :
 
-{% highlight objective-c %}
+{% highlight objc %}
 #import "MSAEventEditionViewController.h"
 
 @implementation MSAEventEditionViewController
@@ -81,7 +81,7 @@ Instead of `NSManagedObject` instances you need to pass a `NSManagedObjectID` in
 
 **MSAEventEditionViewController.m**
 
-{% highlight objective-c %}
+{% highlight objc %}
 #import "MSAEventEditionViewController.h"
 #import "Event.h"
 
@@ -107,7 +107,7 @@ When you want to save, just invoke the `save:` method of the child context, and 
 
 > However, the most widely used merge policy is *NSMergeByPropertyStoreTrumpMergePolicy*.
 
-{% highlight objective-c %}
+{% highlight objc %}
 - (void)saveChanges {
     NSError *error = nil;
     BOOL success = [self.childContext save:&error];
