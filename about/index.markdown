@@ -6,10 +6,8 @@ permalink: /about/
 weight: 10
 ---
 
-Initially, it's a funny story how I came to develop a website for the first time. Back in high school, we had to have a website for our band, to make it look like professionals. Well, step by step I learn the basics.
+My developer life started in high school, learning PHP. Please don't judge me.
 
-I kept on learning new tools, new languages and new best practices, because since 2007 we've all grown up and technologies too. Thanks to excellent websites and blogs &ndash; [Net Tuts](http://net.tutsplus.com/) was one of my favorite &ndash; I was able to stay in the trends. I then heard of the Stanford podcast on <abbr title="iTunes University">iTunes U</abbr> to learn iPhone developement (not yet called iOS at this time remember). So I learn the basic for the iPhone OS 2.0, then, next year I followed the OS 3.0 lesson and so on with the iOS 4 one.
+Then, I registered myself for the online <a target="_blank" href="https://web.stanford.edu/class/cs193p/">Stanford University's CS 193p</a> on <abbr title="iTunes University">iTunes U</abbr> to learn developing iOS applications. The course was made by Evan Doll (creator of Flipboard, working for Apple now) and Alan Cannistraro (former lead of the Facebook Mobile Apps Engineering team). This course focused on learning the iPhone OS 2.0 SDKs in depth.
 
-My spare time was dedicated to learn how to develop, because in the college space I went to <q>Classes préparatoires</q> like we call it in France. To went to a Engineering school specialized in Civil Building.
-
-I've got a Civil Engineering degree now, but I'm planning on making my living with building apps and websites and not buildings.
+I co-founded my first startup in 2012, today known as <a target="_blank" href="https://www.wynd.eu/">Wynd</a>. Then started another startup initiative, under the company name <em>Sixième étage</em>, where we've created <a target="_blank" href="https://fov-app.com">FOV</a> and <a target="_blank" href="https://360player.io">360player</a>.
