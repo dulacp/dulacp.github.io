@@ -134,9 +134,9 @@ In order to do that, we need a very simple one dimensional [Kalman-filter][kalma
 
 ## Fork it !
 
-<iframe src="//ghbtns.com/github-btn.html?user=dulaccc&repo=DPMeterView&type=watch&count=true&size=large"
+<iframe src="//ghbtns.com/github-btn.html?user=dulacp&repo=DPMeterView&type=watch&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="152" height="30"></iframe>
-<iframe src="//ghbtns.com/github-btn.html?user=dulaccc&repo=DPMeterView&type=fork&count=true&size=large"
+<iframe src="//ghbtns.com/github-btn.html?user=dulacp&repo=DPMeterView&type=fork&count=true&size=large"
   allowtransparency="true" frameborder="0" scrolling="0" width="152" height="30"></iframe>
 
 If you have some ideas of improvement, or just want to play with a working example, don't hesitate to fork the [DPMeterView][dp-meter-view--github] project hosted on GitHub.
@@ -157,7 +157,7 @@ If you have some ideas of improvement, or just want to play with a working examp
 [gimbal-lock--wiki]: http://en.wikipedia.org/wiki/Gimbal_lock
 [kalman-filter--wiki]: http://en.wikipedia.org/wiki/Kalman_filter
 
-[dp-meter-view--github]: https://github.com/dulaccc/DPMeterView
+[dp-meter-view--github]: https://github.com/dulacp/DPMeterView
 
 [pixeden-source]: http://www.pixeden.com/psd-mock-up-templates/3d-view-iphone-5-psd-vector-mockup
 

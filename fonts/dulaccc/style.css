@@ -1,17 +1,17 @@
 @font-face {
-	font-family: 'dulaccc';
-	src:url('dulaccc.eot');
-	src:url('dulaccc.eot?#iefix') format('embedded-opentype'),
-		url('dulaccc.svg#dulaccc') format('svg'),
-		url('dulaccc.woff') format('woff'),
-		url('dulaccc.ttf') format('truetype');
+	font-family: 'dulacp';
+	src:url('dulacp.eot');
+	src:url('dulacp.eot?#iefix') format('embedded-opentype'),
+		url('dulacp.svg#dulacp') format('svg'),
+		url('dulacp.woff') format('woff'),
+		url('dulacp.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
-	font-family: 'dulaccc';
+	font-family: 'dulacp';
 	content: attr(data-icon);
 	speak: none;
 	font-weight: normal;
@@ -26,7 +26,7 @@ you can use the generic selector below, but it's slower:
 [class*="icon-"]:before {
 */
 .icon-twitter:before, .icon-github:before, .icon-feed:before, .icon-tags:before, .icon-quill:before, .icon-code:before {
-	font-family: 'dulaccc';
+	font-family: 'dulacp';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;

@@ -6,8 +6,8 @@ It is automatically transformed by Jekyll into a static site whenever I push thi
 
 ## Contact
 
-[Pierre Dulac](http://github.com/dulaccc)  
-[@dulaccc](https://twitter.com/dulaccc)
+[Pierre Dulac](http://github.com/dulacp)  
+[@dulacp](https://twitter.com/_dulacp)
 
 ## License
 

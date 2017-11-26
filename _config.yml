@@ -1,13 +1,13 @@
 # Site settings
-title: "@dulaccc"
-email: "pierre@dulaccc.me"
-description: "Hi everyone, I'm an iOS developer, I love Django to build my backend, and I love Backbone to build the front. Basically, I build iOS apps from start to finish. By the way, I love photography and has a Nuclear Civil Engineering degree in my pocket."
+title: "@dulacp"
+email: "dulacpier@gmail.com"
+description: "Hi everyone, I am a full-stack developer. I write mainly about iOS, Django, Heroku."
 baseurl: ""
-url: "http://dulaccc.me"
+url: "https://dulacp.com"
 
 # User settings
 author: Pierre Dulac
-username: dulaccc
+username: dulacp
 
 # Build settings
 markdown: kramdown

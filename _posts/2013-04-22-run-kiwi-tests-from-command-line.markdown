@@ -46,7 +46,7 @@ test:
 I've integrate the whole thing into a project of mine, [DPMeterView][dp-meter-view--github] hosted on [GitHub][github], and the project is integrated with [Travis Continuition Integration][travis] servers. Learn more on how to [integrate Travis-CI][objective-c--travis] in your open source iOS project, to build stronger libraries!
 
 
-[dp-meter-view--github]: https://github.com/dulaccc/DPMeterView
+[dp-meter-view--github]: https://github.com/dulacp/DPMeterView
 [github]: https://github.com/
 [travis]: https://travis-ci.org/
 [objective-c--travis]: http://about.travis-ci.org/docs/user/languages/objective-c/
