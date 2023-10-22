@@ -46,7 +46,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <a :href="url" target="_blank" class="not-prose flex items-center p-4 bg-white border-gray border-2 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
+  <a :href="url" target="_blank" class="not-prose flex items-center p-4 bg-white border-gray-200 dark:border-transparent border-2 rounded-lg shadow-sm hover:shadow-lg transition duration-300">
     <div class="flex items-center justify-center flex-shrink-0 w-12 h-12 text-white bg-white rounded-full">
       <span v-if="!icon.startsWith('https://')" class="text-xl text-black font-bold">{{ icon }}</span>
       <img v-else :src="icon" class="w-8 h-8" />

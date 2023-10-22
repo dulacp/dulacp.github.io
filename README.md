@@ -2,6 +2,11 @@
 
 My website was made with [Content Wind](https://content-wind.nuxt.space) theme.
 
+## Cheat sheet
+
+**Dev server**: `npm run dev`
+**Static build**: `npm run generate`
+
 ## Contact
 
 [Pierre Dulac](http://github.com/dulacp)  

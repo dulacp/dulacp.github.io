@@ -1,8 +1,14 @@
+import type { Config } from 'tailwindcss'
+import type { PluginUtils } from 'tailwindcss/types/config'
 import defaultTheme from 'tailwindcss/defaultTheme'
 
-export default {
+const config: Config = {
+  content: [],
   theme: {
     extend: {
+      borderColor: ({theme}: { theme: PluginUtils['theme'] }) => ({
+        DEFAULT: theme('colors.gray.400', 'currentColor'),
+      }),
       typography: {
         DEFAULT: {
           css: {
@@ -16,3 +22,5 @@ export default {
     }
   }
 }
+
+export default config
