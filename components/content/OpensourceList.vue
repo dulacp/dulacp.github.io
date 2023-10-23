@@ -19,7 +19,7 @@
       <OpensourceCard
         icon="https://github.com/favicon.ico"
         url="https://github.com/dulacp/django-accounting"
-        name="Accountanting for Django"
+        name="Accounting for Django"
         repo="dulacp/django-accounting"
         year="2017"
         description="Light accounting application for Django 1.7+"
