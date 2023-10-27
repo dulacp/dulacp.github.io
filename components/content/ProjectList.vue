@@ -19,6 +19,16 @@
 
     <li>
       <ProjectCard
+        icon="https://virtualface.app/favicon.ico"
+        url="https://virtualface.app"
+        name="Virtual Face AI"
+        year="2023"
+        description="Corporate headshots in 20 minutes by overfitting Stable Diffusion on a face"
+      />
+    </li>
+
+    <li>
+      <ProjectCard
         icon="https://www.google.com/favicon.ico"
         url="https://www.linkedin.com/in/dulacp/"
         name="Google"
